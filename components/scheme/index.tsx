@@ -10,6 +10,8 @@ const Scheme = () => {
 
     const [stageY, setStageY] = useState(0);
 
+    const [editableText, setEditableText] = useState(false);
+
     const handleWheel = (e) => {
         e.evt.preventDefault();
 
@@ -34,12 +36,19 @@ const Scheme = () => {
             width={window.innerWidth - 10}
             height={window.innerHeight - 250}
             onWheel={(event) => handleWheel(event)}
+            onClick={(e) => {
+                if(e.target.nodeType === 'Stage') {
+                    setEditableText(false);
+                }
+            }}
             scaleX={stageScale}
             scaleY={stageScale}
             x={stageX}
             y={stageY}
         >
-            <Layer/>
+            <Layer editableText={editableText} setEditable={(value) => {
+                setEditableText(value);
+            }} />
         </Stage>
     );
 }

@@ -2,11 +2,11 @@ import { Layer } from "react-konva";
 import React from "react";
 import Nodes from './nodes'
 
-const Scheme = () => {
+const Scheme = ({setEditable, editableText}) => {
 
     return (
         <Layer>
-            <Nodes />
+            <Nodes editableText={editableText} setEditable={setEditable}/>
         </Layer>
     );
 }

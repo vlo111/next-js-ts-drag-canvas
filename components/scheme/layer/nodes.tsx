@@ -1,10 +1,10 @@
 import {Group} from "react-konva";
-import React, { useState } from "react";
+import React, {useState} from "react";
 import Konva from "konva";
 import Circle from './figures/circle'
 import EditableText from './figures/text'
 
-const Nodes = () => {
+const Nodes = ({setEditable, editableText}) => {
     const generateCircles = () => {
         const items = [];
         for (let i = 0; i < 10; i++) {
@@ -58,10 +58,12 @@ const Nodes = () => {
                 />
                 <EditableText
                     name={node.name}
-                    x={node.x}
-                    y={node.y}
-                    width={200}
-                    height={30}
+                    x={node.x - 35}
+                    y={node.y - 35}
+                    width={80}
+                    height={70}
+                    editableText={editableText}
+                    setEditable={setEditable}
                 />
             </Group>
         ))

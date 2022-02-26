@@ -1,7 +1,7 @@
-import {Circle} from "react-konva";
+import { Circle } from "react-konva";
 import React from "react";
 
-const Circle1 = ({node, handleDragStart, handleDragEnd}) => {
+const CustomCircle = ({node, handleDragStart, handleDragEnd}) => {
 
     return (
         <Circle
@@ -30,4 +30,4 @@ const Circle1 = ({node, handleDragStart, handleDragEnd}) => {
     );
 }
 
-export default Circle1;
+export default CustomCircle;

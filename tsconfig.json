@@ -18,7 +18,6 @@
 //  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
 //  "exclude": ["node_modules"]
 //}
-
 {
   "compilerOptions": {
     "allowJs": true,
@@ -42,7 +41,8 @@
     "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true,
     "resolveJsonModule": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+    "incremental": true
   },
   "exclude": [
     "node_modules"
