@@ -45,6 +45,7 @@ const Scheme = () => {
             scaleY={stageScale}
             x={stageX}
             y={stageY}
+            draggable
         >
             <Layer editableText={editableText} setEditable={(value) => {
                 setEditableText(value);

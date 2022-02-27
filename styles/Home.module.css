@@ -108,6 +108,12 @@
   margin-left: 0.5rem;
 }
 
+.header {
+  left: 10%;
+  top: 3%;
+  position: absolute;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;

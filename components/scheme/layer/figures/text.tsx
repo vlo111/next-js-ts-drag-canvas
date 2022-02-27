@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import {Text} from "react-konva";
 import {Html} from "react-konva-utils";
 
-const Text1 = ({name, x, y, width, height, editableText, setEditable}) => {
+const CustomText = ({name, x, y, width, height, editableText, setEditable}) => {
 
     const [value, setValue] = useState(name);
 
@@ -17,6 +17,7 @@ const Text1 = ({name, x, y, width, height, editableText, setEditable}) => {
             resize: "none",
             fontSize: "15px",
             fontFamily: "sans-serif",
+            overflow: 'hidden',
         };
         if (isFirefox) {
             return baseStyle;
@@ -50,52 +51,17 @@ const Text1 = ({name, x, y, width, height, editableText, setEditable}) => {
                 // onKeyDown={onKeyDown}
                 style={style}
             />
-            </Html>
-        // :
-            // <Html
-            //     groupProps={{x: x, y: y}}
-            //     divProps={{
-            //         style: {
-            //             opacity: 1,
-            //             height: height,
-            //             display: 'flex',
-            //             justifyContent: 'center',
-            //             alignItems: 'center'
-            //         }
-            //     }}
-            // >
-            //     <label
-            //         style={{
-            //             width: width,
-            //             height: height,
-            //             display: 'flex',
-            //             justifyContent: 'center',
-            //             alignItems: 'center',
-            //             userSelect: 'none'
-            //         }}
-            //         key={'t' + name}
-            //         onClick={() => {
-            //             setEditable(name)
-            //         }}
-            //     >
-            //         {value.length > 25 ? value.slice(0, 25) + '...' : value}
-            //     </label>
-            // </Html>
-        :
-        <Text
+            </Html> :
+            <Text
             key={'t' + name}
             x={x}
             y={y}
-            align="center"
+            // align="center"
             verticalAlign="middle"
-            // ref={textRef}
             text={value.length > 15 ? `${value.slice(0, 22)}...` : value}
             fill="black"
-            fontFamily="sans-serif"
             fontSize={18}
             perfectDrawEnabled={false}
-            // onDragStart={handleDragStart}
-            // onDragEnd={handleDragEnd}
             onClick={() => {
                 setEditable(name)
             }}
@@ -105,4 +71,4 @@ const Text1 = ({name, x, y, width, height, editableText, setEditable}) => {
     );
 }
 
-export default Text1;
+export default CustomText;

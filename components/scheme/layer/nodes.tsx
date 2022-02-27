@@ -15,7 +15,7 @@ const Nodes = ({setEditable, editableText}) => {
                 rotation: Math.random() * 180,
                 isDragging: false,
                 color: Konva.Util.getRandomColor(),
-                name: 'name ' + i,
+                name: 'Lorem Ipsum is simply dummy text of the printing. ' + i,
             });
         }
         return items;
