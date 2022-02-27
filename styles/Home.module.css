@@ -113,6 +113,9 @@
   top: 3%;
   position: absolute;
 }
+.header   button {
+  margin: 10px;
+}
 
 @media (max-width: 600px) {
   .grid {

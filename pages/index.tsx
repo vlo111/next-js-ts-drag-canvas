@@ -2,6 +2,8 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Control from '../components/control';
+import 'antd/dist/antd.css';
+import { Button } from "antd";
 
 const Home: NextPage = () => {
   return (
@@ -13,7 +15,10 @@ const Home: NextPage = () => {
       </Head>
 
         <header className={styles.header}>
-            text header
+            settings
+            <Button type="primary" onClick={() => console.log('cursor')}>cursor</Button>
+            <Button type="primary" onClick={() => console.log('aaa')}>add node</Button>
+            <Button type="primary" onClick={() => console.log('aaa')}>add link</Button>
         </header>
 
       <main className={styles.main}>
